@@ -94,11 +94,9 @@ $(document).ready(function(){
 		    xmlDoc.getElementsByTagName("url")[9].childNodes[0].nodeValue + "</a href>" +
 		    "<br>" + "</p>";
 		}
-	});
-});
+	})
 
 //click function to view Homeworks						
-$(document).ready(function(){
 	$('#homeworks').click(function(){
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
