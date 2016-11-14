@@ -1,0 +1,152 @@
+/* HTML lab2part3 CSS file */
+
+    body {
+       font-family: Calibri, Helvetica, sans-serif;
+    }
+ 	.Playlist {
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+        height: 100%;
+
+        
+        
+    }
+    .Title {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2em;
+        font-variant: small-caps;
+     
+
+    }
+
+    .Complete {
+        font-style: italic;
+        font-size: 80%;
+        display: table-caption;
+        caption-side: bottom;
+        text-align: center;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+
+        /* last entry indicating end of list */
+
+    }
+
+    .Heading {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+        font-variant: small-caps;
+     
+
+    }
+    .Row {
+        display: table-row;
+
+    }
+    .Cell {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+        padding-left: 5px;
+        padding-right: 5px;
+           
+    }
+
+    .Cell1 {
+    	display: table-cell;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-variant: small-caps; /* song title in small-caps */
+
+    }
+
+     .Cell2 {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: bold; /* artist is bold */
+        font-size: 120%; /* artist is in a 20% larger font */
+        
+    }
+
+     .Cell3 {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-style: italic; /* album name is italicized */
+           
+    }
+
+     .Cell4 {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        /* html for Cell4 moved to the bottom to display the album covers to the right of each listing */
+
+           
+    }
+
+     .Cell5 {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 80%; /* release date in proportionally reduced font-size */
+           
+    }
+
+     .Cell6 {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 80%; /* genre(s) in proportionally reduced font-size */
+           
+    }
+
+    ul {
+    	list-style-type: none;
+
+    }
+
+    ul > li:before {
+    	content: "-";  /* add dash to list item */
+    	position: absolute;
+    	margin-left: -1.1em;
+
+    }
+
+    .Cellfavorite {
+    	color: green; /* favorite song title in green */
+    	display: table-cell;
+        border: solid;
+        border-width: thin;
+        border-color: #008080;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-variant: small-caps; /* song title in small-caps */
+    	
+    }

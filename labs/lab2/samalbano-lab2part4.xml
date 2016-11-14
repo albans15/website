@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="samalbano-lab2part4.css"?>
+<!-- reference to new style sheet -->
+
+	<playlist>
+		<title>Sam's Playlist</title>
+		<html xmlns="http://www.w3.org/1999/xhtml"> <!-- the html namespace given in the lab directions did not work...however, this one did -->
+<br></br> <!-- separate items on each line -->
+		<track0>
+			<song>Track Name</song>
+			<artist>Artist</artist>
+			<album>Album Name</album>
+			<link>Link</link>
+			<release>Release Date</release>
+			<genre>Genre(s)</genre>
+			<cover>Album Cover</cover>
+		</track0>
+<br></br> 
+		<track1>
+			<song>You and I</song>
+			<artist>Johnnyswim</artist>
+			<album>Diamonds</album>
+			<a href="http://www.allmusic.com/song/you-and-i-mt0052845191">Allmusic Link</a>
+			<release>January 21, 2014</release>
+			<genre>Folk, Soul, Blues, Pop Music</genre>
+			<img src="diamonds.jpg" alt="Diamonds album" style="width:100px;height:100px;"></img>
+		</track1>
+<br></br>
+		<track2>
+			<song>Shadow of a Man</song>
+			<artist>Neulore</artist>
+			<album>Animal Evolve</album>
+            <a href="http://www.allmusic.com/song/shadow-of-a-man-mt0048366476">Allmusic Link</a>
+			<release>September 19, 2014</release>
+			<genre>Alternative/Indie/Rock</genre>
+			<img src="animalEvolve.jpg" alt="Animal Evolve album" style="width:100px;height:100px;"></img>
+		</track2>
+<br></br>
+		<track3>
+			<song>Blame It on Me</song>
+			<artist>George Ezra</artist>
+			<album>Wanted on Voyage</album>
+            <a href="http://www.allmusic.com/song/blame-it-on-me-mt0049455412">Allmusic Link</a>
+			<release>May 19, 2014</release>
+			<genre>Rock/Folk/Blues/Roots Rock</genre>
+			<img src="wantedOnVoyage.jpg" alt="Wanted on Voyage album" style="width:100px;height:100px;"></img>
+		</track3>
+<br></br>
+		<track4>
+			<song>Jackson Cage</song>
+			<artist>Bruce Springsteen</artist>
+			<album>The River</album>
+            <a href="http://www.allmusic.com/song/jackson-cage-mt0043607185">Allmusic Link</a>
+			<release>October 17, 1980</release>
+			<genre>Rock/Folk/Heartland</genre>
+			<img src="theRiver.jpg" alt="The River album" style="width:100px;height:100px;"></img>
+		</track4>
+<br></br>
+		<track5>
+			<song>Get Up Get Down</song>
+			<artist>Phillip Phillips</artist>
+			<album>The World From The Side Of The Moon</album>
+            <a href="http://www.allmusic.com/song/get-up-get-down-mt0053074614">Allmusic Link</a>
+			<release>November 19, 2012</release>
+			<genre>Folk Rock/Pop Rock</genre>
+			<img src="philPhil.jpg" alt="The World From The Side Of The Moon album" style="width:100px;height:100px;"></img>
+		</track5>
+<br></br>
+		<track6>
+			<song>In The Air Tonight</song>
+			<artist>Phil Collins</artist>
+			<album>Face Value</album>
+            <a href="http://www.allmusic.com/song/in-the-air-tonight-mt0006853538">Allmusic link</a>
+			<release>February 13, 1981</release>
+			<genre>Soft Rock/Progressive Rock/Art Rock/Pop Rock</genre>
+			<img src="faceValue.jpg" alt="Face Value album" style="width:100px;height:100px;"></img>
+		</track6>
+<br></br>	
+		</html>
+	</playlist>

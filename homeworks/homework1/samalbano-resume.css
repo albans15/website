@@ -1,0 +1,73 @@
+/* resume style-sheet */
+   body {
+        font-family: Calibri, Helvetica, sans-serif;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        min-width: 1590px;
+      }
+
+    .fn {
+    	font-size: 2em;
+    	font-weight: bold;
+    	padding-right: 16em;
+    	display: inherit;
+    	margin-bottom: .5em;
+    }
+
+    .photo {
+    	width: 50px;
+    	height: 80px;
+    	padding-left: 25.5em;
+    	display: inherit;
+    	margin-bottom: -7.5em;
+    }
+
+    .email {
+    	padding-right: 24.5em;
+    	display: inherit;
+    }
+
+    .tel {
+    	padding-left: 43em;
+    	display: inherit;
+    }
+
+    .adr {
+    	display: inherit;
+    	padding-left: 42.7em;
+    }
+
+
+   .Heading {
+        font-weight: bold;
+        text-align: center;
+        font-variant: small-caps;
+        font-size: 1em;
+    }
+
+   .Cell {
+        border-bottom: solid;
+        border-width: thin;
+        border-color: black;
+        border-radius: 2em;
+        max-width: 55%;
+       	margin: auto;   
+    }
+
+    li {
+        list-style: none;
+        display: inherit;
+        max-width: 55%;
+        margin: auto;
+        text-align: left;
+    }
+
+    em {
+    	padding-left: 20em;
+    	float: middle;
+    }
+
+   a {
+   		float: right;
+   }

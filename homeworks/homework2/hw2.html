@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hexed</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+	  
+  #header{
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	font-size: 75px;
+	background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+		  
+  }
+  .container {
+	width: 95;
+	margin: 0 auto;
+	/*background: #bec9a1;*/
+	background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+  }
+
+  .inner_container {
+  	width: 200px;
+  	margin: 0 auto;
+  }
+
+  .button_container {
+  	width: 160px;
+	margin: 0 auto;
+	
+  }
+
+  .container-line {
+  	display: inline-block;
+  }
+	  
+  #red, #green, #blue {
+    float: left;
+    clear: left;
+    width: 300px;
+    margin: 15px;
+  }
+
+  #swatch_container{
+  	position: relative;
+    left: 100px;
+    top: 15px;
+  }
+	  
+  #swatch {
+    width: 120px;
+    height: 100px;
+    display: inline-block;
+    background-image: none;
+  }
+	  
+  #randomSwatch {
+	width: 120px;
+    height: 100px;
+    display: inline-block;
+    background-image: none;
+	
+  }
+	  
+  .Difficulty_Selector {
+	float: right;	 
+  }
+	  
+  .Turns_Selector {
+    float: right;
+  }
+	  
+  #red .ui-slider-range { background: #ef2929; }
+  #red .ui-slider-handle { border-color: #ef2929; }
+  #green .ui-slider-range { background: #8ae234; }
+  #green .ui-slider-handle { border-color: #8ae234; }
+  #blue .ui-slider-range { background: #729fcf; }
+  #blue .ui-slider-handle { border-color: #729fcf; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+	  
+  	//settings class -> stores number of turns/level of difficulty
+
+	
+  	//JQUERY PLUGIN
+  	//Includes code for the color sliders, the user generated swatch, and randomly generated swatch
+    (function( $ ){
+    	//JQUERY PLUGIN Syntax
+   		$.fn.hexed = function() {
+
+   		var settings = {
+			turns:5,
+			difficulty:10
+		}
+
+		var score = {
+			score:0
+		}
+   		//Adds the hex values from each slider up to get the user generated swatch color
+    	function hexFromRGB(r, g, b) {
+	      var hex = [
+	        r.toString( 16 ),
+	        g.toString( 16 ),
+	        b.toString( 16 )
+	      ];
+	      $.each( hex, function( nr, val ) {
+	        if ( val.length === 1 ) {
+	          hex[ nr ] = "0" + val;
+	        }
+	      });
+	      return hex.join( "" ).toUpperCase();
+	    }
+
+	    function totalScore() {
+	    	alert("Your score is " + score.score);
+	    }
+	    //Modifies slider hex values as the user moves the sliders
+	    function refreshSwatch() {
+	      var red = $( "#red" ).slider( "value" ),
+	        green = $( "#green" ).slider( "value" ),
+	        blue = $( "#blue" ).slider( "value" ),
+	        hex_user = hexFromRGB( red, green, blue );
+	      $( "#swatch" ).css( "background-color", "#" + hex_user );
+	    }
+
+	    function refreshSlider() {
+    		$( "#red" ).slider( "value", 10 );
+	    	$( "#green" ).slider( "value", 30 );
+	    	$( "#blue" ).slider( "value", 50 );
+	    }
+
+	    function one_turn(red,green,blue,i) {
+		    	$('.button_base').html('<button class="Start_Turn">Start Turn</button>');
+		    	$('.Start_Turn').click(function() {
+					$('.Start_Turn').remove();
+					$("#slider_container").show();
+					$( "#red, #green, #blue" ).slider({
+			      		orientation: "horizontal",
+			      		range: "min",
+			      		max: 255,
+			      		value: 127,
+			      		slide: refreshSwatch,
+			      		change: refreshSwatch
+			    	});
+
+			    	$( "#red" ).slider( "value", 10 );
+			    	$( "#green" ).slider( "value", 30 );
+			    	$( "#blue" ).slider( "value", 50 );
+
+					$('.button_base').html('<button class="Submit_Answer">Submit Answer</button>');
+						var start = new Date().getTime();
+			 	    	$(".Submit_Answer").click(function() {
+				 	    	$(".Submit_Answer").remove();
+							var finish = new Date().getTime();
+							//Ends timer, then calculates total time taken to complete game
+							var time = finish - start;
+							var absRed = (Math.abs(red - $('#red').slider("value")) / 255) * 100;
+							var absGreen = (Math.abs(green - $('#green').slider("value")) / 255) * 100;
+							var absBlue = (Math.abs(blue - $('#blue').slider("value")) / 255) * 100;
+							var percent_off = (absRed + absGreen + absBlue) / 3;              
+
+
+			              	//15000 ms = 15s
+							var ratio = (15000 - settings.difficulty - percent_off)/(15000 - settings.difficulty);              
+							var difference = 15000 - time;              
+							var thisScore = Math.floor( ratio * difference );
+							if (ratio < 0 || difference < 0 || thisScore < 0) {
+			    				thisScore = 0;                          
+							}  	       
+							score.score += thisScore; 
+							var output = "Score " + score.score + "</br>";
+							output += "Earned " + thisScore + " for this round";               
+							$('#score').html(output);
+							$(".next_turn").show();
+							$("#slider_container").hide();
+					}); 
+				});
+			}
+
+ 
+/*===========================================================================================*/
+	    var output = "";
+	 	output+='<div class="inner_container">'
+	 	output+='<div class="container-line" id="Difficulty_Selector">'
+	 	output+='<p>Difficulty</p>'
+	 	output+='<select id="difficulty">'
+	 	output+='<option value="1">1</option>'
+	 	output+='<option value="2">2</option>'
+	 	output+='<option value="3">3</option>'
+	 	output+='<option value="4">4</option>'
+	 	output+='<option value="5" selected="selected">5</option>'
+	 	output+='<option value="6">6</option>'
+	 	output+='<option value="7">7</option>'
+	 	output+='<option value="8">8</option>'
+	 	output+='<option value="9">9</option>'
+	 	output+='<option value="10">10</option>'
+	 	output+='</select></div>'
+	 	output+='<div class="container-line" id="Turns_Selector">'
+	 	output+='<p>Turns</p>'
+	 	output+='<select id="turns">'
+	 	output+='<option value="1">1</option>'
+	 	output+='<option value="2">2</option>'
+	 	output+='<option value="3">3</option>'
+	 	output+='<option value="4">4</option>'
+	 	output+='<option value="5">5</option>'
+	 	output+='<option value="6">6</option>'
+	 	output+='<option value="7">7</option>'
+	 	output+='<option value="8">8</option>'
+	 	output+='<option value="9">9</option>'
+	 	output+='<option value="10" selected="selected">10</option>'
+	 	output+='</select></div>'
+	 	output+='</div>'
+
+	 	output+='<div class="button_container button_base"></div>'
+	 	output+='<div class="button_container button_base2"></div>'
+	 	output+='<div id="slider_container">'
+	 	output+='<div id="red"></div>'
+	 	output+='<div id="green"></div>'
+	 	output+='<div id="blue"></div></div>'
+
+	 	output+='<div><div id="swatch_container">'
+	 	output+='<div id="swatch"></div>'
+	 	output+='<div id="randomSwatch"></div>'
+	 	output+='<div id="score"></div>'
+	 	output+='</div></div>'
+	 	$("#game").html(output);
+	 	//Remove load game button
+		$("#load_game").remove();
+
+		var e0, e1 = 0;
+		$(".button_base").html("<button class='start_game_button'>Start Game</button>");
+		
+		$(".start_game_button").click(function() {
+			var e0 = document.getElementById("difficulty");
+			settings.difficulty = e0.options[e0.selectedIndex].value;
+			var e1 = document.getElementById("turns");
+			settings.turns = e1.options[e1.selectedIndex].value;
+			$("#turns").remove();
+			$("#difficulty").remove();
+
+			var red = Math.floor( (Math.random()*255) + 1 );
+			var green = Math.floor( (Math.random()*255) + 1 );
+			var blue = Math.floor( (Math.random()*255) + 1 );
+			var hex_random = hexFromRGB(red, blue, green);
+		 	var hex_random_swatch ='#'+hex_random;
+
+		 	$( "#randomSwatch" ).css( "background-color", hex_random_swatch );
+
+
+		 	$(".button_base2").html("<button class='next_turn'>Next Turn</button>");
+	    	one_turn(red,green,blue);
+	    	$(".next_turn").hide();
+
+	    	//Calls the function that modifies the color slider hex value
+
+	    	$(".next_turn").click(function(){ 
+	    		$(".next_turn").hide();
+	    		settings.turns = settings.turns - 1;
+	    		refreshSlider();
+	    		if(settings.turns == 0){
+	    			totalScore();
+	    			return;
+	    		}
+	    		one_turn(red, green, blue);
+	    	});
+	    });
+	    return this;
+		};
+    
+	})( jQuery );
+
+
+	//Stores the number of turns the user wants to play the game for
+	//as well as difficulty in a settings object
+	function load_game(){
+		$("body").hexed();
+		//Starts time
+	};
+
+   
+  </script>
+</head>
+<body>
+	<h1 id="header">Hexed</h1>
+	<p>The purpose of this game is to try to match the color given in the swatch. Upon selecting a difficulty which determines the acceptable margin of error, the User will be presented with a swatch in which to use the sliders to try and match. The User will be given 3 tries to try to find the right color, and then be given an overall score. The time limit per try is 15 seconds. Good luck! </p>
+	<Button id="load_game" onclick="load_game()">Load Game</Button>
+	<div id="game"></div>	
+</body>

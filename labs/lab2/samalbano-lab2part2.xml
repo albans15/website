@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allmusic xmlns:xlink="http://www.w3.org/1999/xlink">
+	<playlist>
+		<track1>	
+			<name>You and I</name>
+			<artist>Johnnyswim</artist>
+			<album>Diamonds</album>
+			<allmusic xlink:type="simple" xlink:href="diamonds.jpg" xlink:actuate="onLoad">Album Cover</allmusic>
+			<allmusic xlink:type="simple" xlink:href="http://www.allmusic.com/song/you-and-i-mt0052845191" xlink:actuate="onLoad">Allmusic Link</allmusic>
+			<release>January 21, 2014</release>
+			<genre>Folk, Soul, Blues, Pop Music</genre>
+		</track1>
+
+		<track2>
+			<name>Shadow of a Man</name>
+			<artist>Neulore</artist>
+			<album>Animal Evolve</album>
+			<allmusic xlink:type="simple" xlink:href="animalEvolve.jpg" xlink:actuate="onLoad">Album Cover</allmusic>
+			<allmusic xlink:type="simple" xlink:href="http://www.allmusic.com/song/shadow-of-a-man-mt0048366476" xlink:actuate="onLoad">Allmusic Link</allmusic>
+			<release>September 19, 2014</release>
+			<genre>Alternative/Indie/Rock</genre>
+		</track2>
+
+		<track3>
+			<name>Blame It on Me</name>
+			<artist>George Ezra</artist>
+			<album>Wanted on Voyage</album>
+			<allmusic xlink:type="simple" xlink:href="wantedOnVoyage.jpg" xlink:actuate="onLoad">Album Cover</allmusic>
+			<allmusic xlink:type="simple" xlink:href="http://www.allmusic.com/song/blame-it-on-me-mt0049455412" xlink:actuate="onLoad">Allmusic Link</allmusic>
+			<release>May 19, 2014</release>
+			<genre>Rock/Folk/Blues/Roots Rock</genre>
+		</track3>
+
+		<track4>
+			<name>Jackson Cage</name>
+			<artist>Bruce Springsteen</artist>
+			<album>The River</album>
+			<allmusic xlink:type="simple" xlink:href="wtheRiver.jpg" xlink:actuate="onLoad">Album Cover</allmusic>
+			<allmusic xlink:type="simple" xlink:href="http://www.allmusic.com/song/jackson-cage-mt0043607185" xlink:actuate="onLoad">Allmusic Link</allmusic>
+			<release>October 17, 1980</release>
+			<genre>Rock/Folk/Heartland</genre>
+		</track4>
+
+		<track5>
+			<name>Get Up Get Down</name>
+			<artist>Phillip Phillips</artist>
+			<album>The World From The Side Of The Moon</album>
+			<allmusic xlink:type="simple" xlink:href="philPhil.jpg" xlink:actuate="onLoad">Album Cover</allmusic>
+			<allmusic xlink:type="simple" xlink:href="hhttp://www.allmusic.com/song/get-up-get-down-mt0053074614" xlink:actuate="onLoad">Allmusic Link</allmusic>
+			<release>November 19, 2012</release>
+			<genre>Folk Rock/Pop Rock</genre>
+		</track5>
+
+		<track6>
+			<name>In The Air Tonight</name>
+			<artist>Phil Collins</artist>
+			<album>Face Value</album>
+			<allmusic xlink:type="simple" xlink:href="faceValue.jpg" xlink:actuate="onLoad">Album Cover</allmusic>
+			<allmusic xlink:type="simple" xlink:href="http://www.allmusic.com/song/in-the-air-tonight-mt0006853538" xlink:actuate="onLoad">Allmusic Link</allmusic>
+			<release>February 13, 1981</release>
+			<genre>Soft Rock/Progressive Rock/Art Rock/Pop Rock</genre>
+		</track6>
+	</playlist>
+</allmusic>

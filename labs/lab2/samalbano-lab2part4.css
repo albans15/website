@@ -1,0 +1,144 @@
+/* lab2-part4 XML style sheet */
+
+playlist *{
+	margin: auto;
+	display: table;
+	font-family: Calibri, Helvetica, sans-serif;
+	height: 100%;
+       
+}
+
+title {
+    font-weight: bold;
+    font-size: 2em;
+    font-variant: small-caps;
+
+}
+
+
+track0 {
+	min-width: 75%;
+	border-bottom: solid; /* border-bottom used as line separating each entry */
+	border-bottom-width: thick;
+    border-color: #008080;
+
+}
+
+
+track1 {
+	max-width: 75%;
+	border-bottom: solid;
+	border-bottom-width: thin;
+    border-color: #008080;
+
+
+}
+
+track2 {
+	max-width: 75%;
+	border-bottom: solid;
+	border-bottom-width: thin;
+    border-color: #008080;
+	
+}
+
+track3 {
+	max-width: 75%;
+	border-bottom: solid;
+	border-bottom-width: thin;
+    border-color: #008080;
+
+}
+
+track4 {
+	max-width: 75%;
+	border-bottom: solid;
+	border-bottom-width: thin;
+    border-color: #008080;
+
+}
+
+track5 {
+	max-width: 75%;
+	border-bottom: solid;
+	border-bottom-width: thin;
+    border-color: #008080;
+
+}
+
+track6 {
+	max-width: 75%;
+	border-bottom: solid;
+	border-bottom-width: thin;
+    border-color: #008080;
+
+}
+
+song {  /* song title is first */
+	display: table-cell;  
+	padding-right: 2em;
+
+}
+
+artist {
+	display: table-cell;
+	color: blue; /* artist name is in blue */
+	font-size: 120%; /* song name slightly smaller or artist name slightly larger */
+	padding-left: 2em;
+	padding-right: 2em;
+
+
+}
+
+album {
+	display: table-cell;
+	font-style: italic; /* album name is in italics */
+	padding-left: 2em;
+	padding-right: 2em;
+
+}
+
+release {
+	display: table-cell;
+	padding-left: 2em;
+	padding-right: 2em;
+
+}
+
+genre {
+	display: table-cell;
+	padding-left: 2em;
+	padding-right: 2em;
+
+}
+
+img {
+	display: table-cell;
+	padding-left: 2em;
+
+
+}
+
+a {
+	display: table-cell;
+	padding-left: 2em;
+	padding-right:2em;
+
+}
+
+cover {
+	display: table-cell;
+	padding-left: 2em;
+
+
+}
+
+link {
+	display: table-cell;
+	padding-left: 2em;
+	padding-right:2em;
+
+}
+
+
+

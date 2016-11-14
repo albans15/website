@@ -1,0 +1,58 @@
+{
+	"playlist": [
+		{
+			"trackName": "You and I",
+			"artist": "Johnnyswim",
+			"albumName": "Diamonds",
+			"releaseDate": "January 21, 2014",
+			"genre": "Folk, Soul, Blues, Pop Music",
+			"albumCover": "diamonds.jpg",
+			"url": "http://www.allmusic.com/song/you-and-i-mt0052845191"
+		},
+		{
+			"trackName": "Shadow of a Man",
+			"artist": "Neulore",
+			"albumName": "Animal Evolve",
+			"releaseDate": "September 19, 2014",
+			"genre": "Alternative, Indie, Rock",
+			"albumCover": "animalEvolve.jpg",
+			"url": "http://www.allmusic.com/song/shadow-of-a-man-mt0048366476"
+		},
+		{
+			"trackName": "Blame It On Me",
+			"artist": "George Ezra",
+			"albumName": "Wanted On Voyage",
+			"releaseDate": "May 19, 2014",
+			"genre": "Rock, Folk, Blues, Roots Rock",
+			"albuurlmCover": "wantedOnVoyage.jpg",
+			"url": "http://www.allmusic.com/song/blame-it-on-me-mt0049455412"
+		},
+		{
+			"trackName": "Jackson Cage",
+			"artist": "Bruce Springsteen",
+			"albumName": "The River",
+			"releaseDate": "October 17, 1980",
+			"genre": "Rock, Folk, Heartland",
+			"albumCover": "theRiver.jpg",
+			"url": "http://www.allmusic.com/song/jackson-cage-mt0043607185"
+		},
+		{
+			"trackName": "Get Up Get Down",
+			"artist": "Phillip Phillips",
+			"albumName": "The World From The Side Of The Moon",
+			"releaseDate": "November 19, 2012",
+			"genre": "Folk Rock, Pop Rock",
+			"albumCover": "philPhil.jpg",
+			"url": "http://www.allmusic.com/song/get-up-get-down-mt0053074614"
+		},
+		{
+			"trackName": "In The Air Tonight",
+			"artist": "Phil Collins",
+			"albumName": "Face Value",
+			"releaseDate": "February 13, 1981",
+			"genre": "Soft Rock, Progressive Rock, Art Rock, Pop Rock",
+			"albumCover": "faceValue.jpg",
+			"url": "http://www.allmusic.com/song/in-the-air-tonight-mt0006853538"
+		}
+	]
+}

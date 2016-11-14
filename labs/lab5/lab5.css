@@ -1,0 +1,14 @@
+body {
+	font-family: calibri;
+	margin: 0 auto;
+}
+ul {
+	background-color: orange;
+	max-width: 400px;
+}
+li {
+	list-style-type: none;
+}
+#showall {
+	width: 100px;
+}

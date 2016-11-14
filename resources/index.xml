@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<assignments>
+		<item>
+			<title>Lab 1</title>
+			<description>Apache configuration and virtual hosts</description>
+			<url>solution for lab1</url>
+		</item>
+		<item>
+			<title>Lab 2</title>
+			<description>Playlist using HTML and XML</description>
+			<url>solution for lab2</url>
+		</item>
+		<item>
+			<title>Lab 3</title>
+			<description>Iterating through the DOM</description>
+			<url>solution for lab3</url>
+		</item>
+		<item>
+			<title>Lab 4</title>
+			<description>AJAX GET Request</description>
+			<url>solution for lab4</url>
+		</item>
+		<item>
+			<title>Lab 5</title>
+			<description>Front end optimization</description>
+			<url>solution for lab5</url>
+		</item>
+		<item>
+			<title>Lab 6</title>
+			<description>PHP calculator</description>
+			<url>solution for lab6</url>
+		</item>
+		<item>
+			<title>Lab 7</title>
+			<description>Website design using Quiz 1</description>
+			<url>solution for lab7</url>
+		</item>
+		<item>
+			<title>Lab 8</title>
+			<description>MySQL/phpMyAdmin</description>
+			<url>solution for lab8</url>
+		</item>
+		<item>
+			<title>Lab 9</title>
+			<description>POD and PHP</description>
+			<url>solution for lab9</url>
+		</item>
+		<item>
+			<title>Lab 10</title>
+			<description>placeholder</description>
+			<url>solution for lab10</url>
+		</item>
+		<item>
+			<title>Homework 1</title>
+			<description>Resume using Microformats</description>
+			<url>solution for hw1</url>
+		</item>
+		<item>
+			<title>Homework 2</title>
+			<description>Hexed! jQuery Plugin</description>
+			<url>solution for hw2</url>
+		</item>
+	</assignments>
+
+
+
