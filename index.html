@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--external bootstrap stylesheet-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--external jQuery stylesheet-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!--jQuery library-->
@@ -15,9 +16,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--personal javascript-->
     <script src="./resources/index.js"></script>
-    <!--added to prevent favicon.ico requests-->
+    <!--added to prevent browser from requesting favicon.ico-->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <!--embedded css-->
+    <!--personal embedded css-->
     <style type="text/css">
      .navbar {
         font-variant: small-caps;
@@ -33,10 +34,7 @@
       background-color: #e1eaea;
       margin: 0em 60em 0em 0em;
       font-family: Georgia serif;
-
      }
-  </style>
-
     </style>
    </head>
 
@@ -47,6 +45,7 @@
           <div class="navbar-header">
             <a class="navbar-brand">Web Systems - Fall 2016</a>
           </div>
+      <!--jQueryUI tabs-->
       <div id="tabs">
         <!--bootstrap Pills nav style-->
         <div class="col-md-3">
@@ -59,11 +58,17 @@
         </div>
       </div>
     </nav>
-      
 <div id="bodyBlock">
-    <div id="output">Welcome to my personal site for this course. Here you will find all completed labs and homework, with descriptions and links to their solutions. This site was built using Bootstrap, jQueryUI, HTML5, CSS, JavaScript, and XML.</div>
+    <div id="output">
+      <p>Welcome to my personal site for this course. Here you will find all completed labs and homework, with descriptions and links to their solutions. This site was built using Bootstrap, jQueryUI, HTML5, CSS, JavaScript, and XML.</p>
+      <br>
+      <br>
+      <br>
+      <p>Contact me: <a class="email" href="mailto:albans2@rpi.edu"><span class="glyphicon glyphicon-envelope"></span></a></p>
+    </div>
 </div>
 
+<!--javascript placed at bottom so it doesn't interfere with document load time-->
     <!--jQueryUI tabs-->
     <script>
       $( function() {

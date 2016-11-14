@@ -12,10 +12,16 @@ I created my remote repo named 'website' using the GitBash command prompt from m
 
 **Bootstrap:**
 
+http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar&stacked=h
+
+http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp
+
+http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_pills&stacked=h
 
 
 **jQueryUI:**
 
+http://jqueryui.com/tabs/
 
 
 
