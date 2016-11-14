@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	//click function to view Labs
-	$('#labs').click(function(){
+	$('.labs').click(function(){
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
@@ -13,7 +13,7 @@ $(document).ready(function(){
 		function myFunction(xml) {
 		    var xmlDoc = xml.responseXML;
 
-		    document.getElementById("labsOutput").innerHTML =
+		    document.getElementById("output").innerHTML =
 		    //lab1
 		    xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue +
 		    "<br>" +
@@ -97,7 +97,7 @@ $(document).ready(function(){
 	})
 
 //click function to view Homeworks						
-	$('#homeworks').click(function(){
+	$(".homeworks").click(function(){
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
@@ -110,7 +110,7 @@ $(document).ready(function(){
 		function myFunction(xml) {
 		    var xmlDoc = xml.responseXML;
 
-		    document.getElementById("homeworksOutput").innerHTML =
+		    document.getElementById("output").innerHTML =
 
 		    //homework1
 		    xmlDoc.getElementsByTagName("title")[10].childNodes[0].nodeValue +

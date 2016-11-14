@@ -2,39 +2,59 @@
 
   <head>
     <title>Class Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--external bootstrap stylesheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--jQuery library-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--external bootstrap javascript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--personal javascript-->
     <script src="./resources/index.js"></script>
+    <!--added to prevent favicon.ico requests-->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <!--embedded css-->
     <style type="text/css">
-     h1 {
-        font-family: Calibri, Helvetica, sans-serif;
-        background-color: gray;
-        color: white;
-        border:  1px solid silver;
-        border-margin: 1em 1em 1em 1em;
+     .navbar {
         font-variant: small-caps;
       }
-    #labsOutput {
-      padding-left: 3em;
-    }
-    #homeworksOutput {
-      padding-left: 3em;
-    }
-    #bodyBlock {
-      display: block;
+    #output {
+      padding-left: 5em;
     }
     </style>
    </head>
 
    <body>
-  <h1><center>Web Systems - Fall 2016</center></h1>
-  <div id="bodyBlock">
-    <div id="labs">Labs</div>
-    <div id="labsOutput"></div>
-    <div id="homeworks">Homeworks</div>
-    <div id="homeworksOutput"></div>
-    </div>
+    <!--bootstrap navbar-->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand">Web Systems - Fall 2016</a>
+          </div>
+      <div id="tabs">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="http://websys/">Home</a></li>
+            <li class="labs"><a href="#labs">Labs</a></li>
+            <li class="homeworks"><a href="#homeworks">Homeworks</a></li>
+          </ul>
+      </div>
+      </nav>
+      
+
+      <div id="output"></div>
+
+
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+
+
    </body>
  </html>
 
