@@ -22,9 +22,21 @@
      .navbar {
         font-variant: small-caps;
       }
-    #output {
-      padding-left: 5em;
-    }
+     #output {
+      text-align: right;
+      margin-right: 1em;
+     }
+     #tabs {
+      padding-top: 5px;
+     }
+     #bodyBlock {
+      background-color: #e1eaea;
+      margin: 0em 60em 0em 0em;
+      font-family: Georgia serif;
+
+     }
+  </style>
+
     </style>
    </head>
 
@@ -36,23 +48,28 @@
             <a class="navbar-brand">Web Systems - Fall 2016</a>
           </div>
       <div id="tabs">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="http://websys/">Home</a></li>
-            <li class="labs"><a href="#labs">Labs</a></li>
-            <li class="homeworks"><a href="#homeworks">Homeworks</a></li>
+        <!--bootstrap Pills nav style-->
+        <div class="col-md-3">
+          <ul class="nav nav-pills">
+            <li class="active"><a href="http://websys/">About</a></li>
+            <!--added the data toggle so the color changes to the section clicked-->
+            <li class="labs"><a data-toggle="pill" href="#labs">Labs</a></li>
+            <li class="homeworks"><a data-toggle="pill" href="#homeworks">Homeworks</a></li>
           </ul>
+        </div>
       </div>
-      </nav>
+    </nav>
       
+<div id="bodyBlock">
+    <div id="output">Welcome to my personal site for this course. Here you will find all completed labs and homework, with descriptions and links to their solutions. This site was built using Bootstrap, jQueryUI, HTML5, CSS, JavaScript, and XML.</div>
+</div>
 
-      <div id="output"></div>
-
-
-  <script>
-  $( function() {
-    $( "#tabs" ).tabs();
-  } );
-  </script>
+    <!--jQueryUI tabs-->
+    <script>
+      $( function() {
+        $( "#tabs" ).tabs();
+      } );
+    </script>
 
 
    </body>
