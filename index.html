@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!--jQuery library-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!--external bootstrap javascript-->
@@ -21,29 +22,42 @@
     <!--personal embedded css-->
     <style type="text/css">
      .navbar {
-        font-variant: small-caps;
+        margin-top: -2em;
       }
      #output {
-      text-align: right;
-      margin-right: 1em;
+      text-align: left;
+      margin-left: 1em;
      }
      #tabs {
       padding-top: 5px;
+      padding-left: 14em;
      }
      #bodyBlock {
       background-color: #e1eaea;
-      margin: 0em 60em 0em 0em;
-      font-family: Georgia serif;
+      margin: 0em 30em 0em 16em;
+      font-family: arial;
+      font-size: 1em;
+     }
+     h4 {
+      padding-top: 3em;
      }
     </style>
    </head>
 
    <body>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>WEB SYSTEMS DEVELOPMENT</h1>
+        <p>Rensselaer Polytechnic Institute, Fall 2016</p>
+        <p>Contact me: <a class="email" href="mailto:albans2@rpi.edu"><span class="glyphicon glyphicon-envelope"></span></a></p>
+      </div>
+    </div>
+
     <!--bootstrap navbar-->
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse navbar-fixed">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand">Web Systems - Fall 2016</a>
           </div>
       <!--jQueryUI tabs-->
       <div id="tabs">
@@ -58,13 +72,15 @@
         </div>
       </div>
     </nav>
+
+
 <div id="bodyBlock">
     <div id="output">
-      <p>Welcome to my personal site for this course. Here you will find all completed labs and homework, with descriptions and links to their solutions. This site was built using Bootstrap, jQueryUI, HTML5, CSS, JavaScript, and XML.</p>
+      <h4>Welcome to my personal site for this course. Here you will find all completed labs and homework, with descriptions and links to their solutions. This site was built using Bootstrap, jQueryUI, HTML5, CSS, JavaScript, and XML.</h4>
       <br>
       <br>
       <br>
-      <p>Contact me: <a class="email" href="mailto:albans2@rpi.edu"><span class="glyphicon glyphicon-envelope"></span></a></p>
+      <p>--Sam Albano</p>
     </div>
 </div>
 
@@ -72,7 +88,9 @@
     <!--jQueryUI tabs-->
     <script>
       $( function() {
-        $( "#tabs" ).tabs();
+        $( "#tabs" ).tabs({
+      collapsible: true
+        });
       } );
     </script>
 

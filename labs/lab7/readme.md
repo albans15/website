@@ -18,6 +18,8 @@ http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp
 
 http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_pills&stacked=h
 
+http://getbootstrap.com/examples/jumbotron/
+
 
 **jQueryUI:**
 
