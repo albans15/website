@@ -15,9 +15,19 @@ catch (Exception $e) {
 
 // Check login
 if (isset($_POST['login']) && $_POST['login'] == 'Login') {
+$salt_stmt = $dbconn->prepare('SELECT salt FROM users_secure WHERE username=:username');
+$salt_stmt->execute(array(':username' => $_POST['username']));
+$res = $salt_stmt->fetch();
+$salt = ($res) ? $res['salt'] : '';
+$salted = hash('sha256', $salt . $_POST['pass']);
 
+$login_stmt = $dbconn->prepare('SELECT username, uid FROM users_secure WHERE username=:username AND pass=:pass');
+$login_stmt->execute(array(':username' => $_POST['username'], ':pass' => $salted));
 // validate user, setup session variables and check to see if an admin here
-
+if ($user = $login_stmt->fetch()) {
+  $_SESSION['username'] = $user['username'];
+  $_SESSION['uid'] = $user['uid'];
+}
     if ($user['is_admin']==true) {
       header('Location: register_auth.php');
       exit();
@@ -25,9 +35,6 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   } else {
     $err = 'Incorrect username or password.';
   }
-}
-
-
 
 // Logout
 if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] == 'Logout') {

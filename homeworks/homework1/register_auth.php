@@ -31,18 +31,20 @@
         else if ($_POST['pass'] !== $_POST['passconfirm']) {
           $msg = "Passwords must match.";
         } else {
-          // Generate random salt here
+      // Generate random salt
+      $salt = hash('sha256', uniqid(mt_rand(), true));      
 
-          // Apply salt before hashing here
+      // Apply salt before hashing
+      $salted = hash('sha256', $salt . $_POST['pass']);
 
           // set admin value : $is_admin = true or false : here
-
+      $is_admin = ($_POST['isadmin'] == "true" ? true : false);
           // Store the salt with the password, so we can apply it again and check the result
           // prepared statement is here
           $stmt = $dbconn->prepare("INSERT INTO users_auth (username, pass, salt, is_admin) 
                               VALUES (:username, :pass, :salt, :isadmin)");
 
-          // the execute statement here
+          // the execute statement heres
 
 
           $msg = "Account created.";
