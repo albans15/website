@@ -15,7 +15,7 @@
 	   	foreach ($results as $row) {
 	   		echo '<pre>';
 	   		print_r($row);
-	   		echo '<pre';
+	   		echo '<pre>';
 
 	   		printf("Last name = %s", $row['lastname']);
 	   	}
