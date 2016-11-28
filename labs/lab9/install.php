@@ -48,7 +48,7 @@ try {
   // create table 'grades'
    $sql = $dbh->exec("CREATE TABLE IF NOT EXISTS `grades` (
     ID int(11) not null AUTO_INCREMENT, CRN int(11) not null, 
-    RIN int(11) not null, grade int(3) not null, 
+    RIN int(11) not null, Grade int(3) not null, 
     PRIMARY KEY (ID))");
 
    } catch(PDOException $e) {
